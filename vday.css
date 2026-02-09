@@ -170,7 +170,7 @@ button {
 .glass-card {
   display:flex-box;
     position:absolute;
-    inset: -42px 0px 0px 11px;
+    inset: -42px 0px 0px 4px;
     /* 1. Set a semi-transparent background color using RGBA */
     background: rgba(255, 255, 255, 0.04); 
     
