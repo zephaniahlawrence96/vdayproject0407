@@ -245,8 +245,9 @@ button {
   .glass-card{
     /* min-height:324px; */
     /* max-height:324px; */
+    /* width: 84%; */
     inset: 4px 0px 0px 9px;
-    scale: .97;
+    scale: .94;
   }
   .emote{
     /* margin-top: 11px; */
