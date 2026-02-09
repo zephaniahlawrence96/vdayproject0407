@@ -188,7 +188,7 @@ button {
     /* width: 494px; */
     min-height: 357px;
     height: 49%;
-    width: 89%;
+    width: 87%;
     max-height: 367px;
     max-width: 494px;
     text-align: center;
@@ -202,12 +202,12 @@ button {
 @media (max-width: 490px){
   #targetElement{
     position:absolute;
-    inset:24% 0 0 -12px;
+    inset:24% 0 0 -4px;
     height:57%;
     width:104%;
   }
   .glass-card{
-    inset: 4px 0px 0px 9px;
+    inset: 4px 0px 0px -4px;
     scale: .94;
   }
 }
