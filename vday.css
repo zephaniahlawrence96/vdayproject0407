@@ -546,7 +546,7 @@ button {
 }
 
 .item8 {
-  background: url("gifs/s4.gif") 49% 44% / 174% no-repeat;
+  background: url("gifs/s4 .gif") 49% 44% / 174% no-repeat;
   animation-delay: calc(42s / 10 * (10 - 8) * -1);
 }
 .item9 {
