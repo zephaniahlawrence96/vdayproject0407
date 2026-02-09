@@ -35,7 +35,7 @@ canvas{
   background: transparent;
   top:0;
   left:0;
-  z-index:11;
+  z-index:99;
   overflow:visible;
   /* height:100%; */
   /* width:100%; */
