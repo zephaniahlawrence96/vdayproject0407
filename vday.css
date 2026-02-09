@@ -11,8 +11,19 @@
 
 body{
   background:black;
-  /* background: url("images/alternatebackground.png") center center / cover no-repeat; */
-  background-image: url("images/bubbleheartfallback.png") center center / cover no-repeat;
+  /* background:darkturquoise; */
+  /* background:darkcyan; */
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+  /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+  /* background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%); */
+  /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
+  /* background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%); */
+  /* background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); */
+  /* background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%); */
+  /* background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%); */
+  /* background-image: url("images/alternatebackground.png") center center / cover no-repeat; */
+  /* background-image: url("images/bubbleheartfallback.png") center center / cover no-repeat; */
 }
 
 html, body {
@@ -159,7 +170,7 @@ button {
 .glass-card {
   display:flex-box;
     position:absolute;
-    inset: 0% 0px 0px 0px;
+    inset: 0px 0px 0px -11px;
     /* 1. Set a semi-transparent background color using RGBA */
     background: rgba(255, 255, 255, 0.04); 
     
@@ -188,9 +199,57 @@ button {
     z-index: 24;
 }
 
-/* screen and (max-width: 600px){
-
-} */
+@media (max-width: 1000px){
+  #targetElement{
+    /* display:flex-box; */
+    position:absolute;
+    inset:10% 0 0 -7px;
+    height:80%;
+    width:100%;
+  }
+  .glass-card{
+    inset: -49px 0px 0px 0px;
+    scale:.89;
+  }
+}
+@media (max-width: 742px){
+  #targetElement{
+    position:absolute;
+    inset:14% 0 0 -4px;
+    height:74%;
+    width:100%;
+  }
+  .glass-card{
+    scale:.84;
+  }
+}
+@media (max-width: 694px){
+  #targetElement{
+    position:absolute;
+    inset:17% 0 0 -4px;
+    height:67%;
+    width:100%;
+  }
+  .glass-card{
+    /* max-height:224px; */
+    scale:.74;
+  }
+}
+@media (max-width: 490px){
+  #targetElement{
+    position:absolute;
+    inset:24% 0 0 -12px;
+    height:47%;
+    width:104%;
+  }
+  .glass-card{
+    min-height:324px;
+    max-height:324px;
+    /* max-height:100px; */
+    inset: -29px 0px 0px 0px;
+    scale: .67;
+  }
+}
 
 
 .video-container {
