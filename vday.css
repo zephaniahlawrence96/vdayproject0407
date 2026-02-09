@@ -202,7 +202,7 @@ button {
 @media (max-width: 490px){
   #targetElement{
     position:absolute;
-    inset:24% 0 0 -4px;
+    inset:24% 0 0 -2px;
     height:57%;
     width:104%;
   }
