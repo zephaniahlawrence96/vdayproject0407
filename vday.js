@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Define the middle zone (e.g., from 40% height to 60% height)
         const middleStart = viewportHeight * 0.34; // 40% from top
-        const middleEnd = viewportHeight * 0.59;   // 60% from top
+        const middleEnd = viewportHeight * 0.67;   // 60% from top
         const middleStart2 = viewportWidth * 0.24; // 40% from left
         const middleEnd2 = viewportWidth * 0.94;   // 60% from left
 
