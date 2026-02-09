@@ -11,8 +11,8 @@
 
 body{
   background:black;
-  background: url("images/alternatebackground.png") center center / cover no-repeat;
-  /* background-image: url("images/bubbleheartfallback.png") center center / cover no-repeat; */
+  /* background: url("images/alternatebackground.png") center center / cover no-repeat; */
+  background-image: url("images/bubbleheartfallback.png") center center / cover no-repeat;
 }
 
 html, body {
