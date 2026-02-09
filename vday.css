@@ -245,9 +245,17 @@ button {
   .glass-card{
     /* min-height:324px; */
     /* max-height:324px; */
-    inset: -4px 0px 0px 0px;
+    inset: 4px 0px 0px 0px;
     scale: .97;
   }
+  .emote{
+    /* margin-top: 11px; */
+    /* margin-bottom: 19px; */
+  }
+  /* .message1{
+    margin-top: 94px;
+    margin-bottom:-9px;
+  } */
 }
 @media (max-width: 424px){
   #targetElement{
@@ -259,7 +267,7 @@ button {
   .glass-card{
     min-height:324px;
     max-height:324px;
-    inset: -29px 0px 0px 0px;
+    inset: -4px 0px 0px 0px;
     scale: .94;
   }
 }
