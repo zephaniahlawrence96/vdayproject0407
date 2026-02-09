@@ -238,6 +238,20 @@ button {
 @media (max-width: 490px){
   #targetElement{
     position:absolute;
+    inset:21% 0 0 -12px;
+    height:59%;
+    width:104%;
+  }
+  .glass-card{
+    min-height:324px;
+    max-height:324px;
+    inset: -40px 0px 0px 0px;
+    scale: .69;
+  }
+}
+@media (max-width: 424px){
+  #targetElement{
+    position:absolute;
     inset:24% 0 0 -12px;
     height:47%;
     width:104%;
@@ -245,11 +259,11 @@ button {
   .glass-card{
     min-height:324px;
     max-height:324px;
-    /* max-height:100px; */
     inset: -29px 0px 0px 0px;
     scale: .67;
   }
 }
+
 
 
 .video-container {
