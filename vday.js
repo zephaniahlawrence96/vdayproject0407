@@ -59,6 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }       
         });
     });
+
+    document.addEventListener('touchmove', function(event) {
+        canvas.style.pointerEvents = 'all';
+        const touch = event.touches[0];
+        const touchX = touch.clientX;
+        const touchY = touch.clientY;
+
+        btns.forEach(btn => {
+            const btnspace = btn.getBoundingClientRect();
+
+            if (
+                touchX >= btnspace.left && touchX <= btnspace.right &&
+                touchY >= btnspace.top && touchY <= btnspace.bottom
+            ) {
+                // Mouse is over the target element, change pointer-events of the other element
+                // console.log(`In position`);
+                canvas.style.pointerEvents = 'none';
+                // targetElement.classList.add('active');
+            }       
+        });
+        event.preventDefault();
+    }, { passive: false });
 });
 
 
@@ -74,6 +96,90 @@ document.addEventListener('DOMContentLoaded', () => {
     const message1 = document.querySelector('.message1');
     const message2 = document.querySelector('.message2');
     const envelope = document.querySelector('.envelope');
+
+
+    document.addEventListener('touchmove', function(event) {
+        // canvas.style.pointerEvents = 'all';
+        const touch = event.touches[0];
+        const touchX = touch.clientX;
+        const touchY = touch.clientY;
+
+        const btnspace = yesbtn.getBoundingClientRect();
+
+            if (
+                touchX >= btnspace.left && touchX <= btnspace.right &&
+                touchY >= btnspace.top && touchY <= btnspace.bottom
+            ) {
+                hopeful.style.display = 'inline';
+                smile.style.display = 'none';
+                sad.style.display = 'none';
+                cry.style.display = 'none';
+                droop.style.display = 'none';
+                message1.style.visibility = 'hidden';
+                envelope.style.display = 'none';
+            }  
+        event.preventDefault(); 
+    }, { passive: false });
+
+
+    document.addEventListener('touchmove', function(event) {
+        // canvas.style.pointerEvents = 'all';
+        const touch = event.touches[0];
+        const touchX = touch.clientX;
+        const touchY = touch.clientY;
+
+        const btnspace = nobtn.getBoundingClientRect();
+
+            if (
+                touchX >= btnspace.left && touchX <= btnspace.right &&
+                touchY >= btnspace.top && touchY <= btnspace.bottom
+            ) {
+                sad.style.display = 'inline';
+                smile.style.display = 'none';
+                cry.style.display = 'none';
+                droop.style.display = 'none';
+                hopeful.style.display = 'none';
+                message1.style.visibility = 'hidden';
+                envelope.style.display = 'none';
+            }
+        event.preventDefault();  
+    }, { passive: false });
+
+
+    document.addEventListener('touchmove', function(event) {
+        // canvas.style.pointerEvents = 'all';
+        const touch = event.touches[0];
+        const touchX = touch.clientX;
+        const touchY = touch.clientY;
+
+        const btnspace = cry.getBoundingClientRect();
+
+            if (
+                touchX >= btnspace.left && touchX <= btnspace.right &&
+                touchY >= btnspace.top && touchY <= btnspace.bottom
+            ) {
+                emotehover.classList.add(':hover');
+            }
+        event.preventDefault();  
+    }, { passive: false });
+
+
+    document.addEventListener('touchmove', function(event) {
+        // canvas.style.pointerEvents = 'all';
+        const touch = event.touches[0];
+        const touchX = touch.clientX;
+        const touchY = touch.clientY;
+
+        const btnspace = envelope.getBoundingClientRect();
+
+            if (
+                touchX >= btnspace.left && touchX <= btnspace.right &&
+                touchY >= btnspace.top && touchY <= btnspace.bottom
+            ) {
+
+            }
+        event.preventDefault();  
+    }, { passive: false });
 
 
     yesbtn.addEventListener('mouseover', (event) => {
