@@ -27,6 +27,7 @@ body{
 }
 
 html, body {
+  /* position:relative; */
   /* background:black; */
   /* background: url("images/alternatebackground.png"); */
   height: 100%;
