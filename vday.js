@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 touchY >= btnspace.top && touchY <= btnspace.bottom
             ) {
                 yeshover.classList.add('hover');
-                nohover.classList.remove('hover');
                 hopeful.style.display = 'inline';
                 smile.style.display = 'none';
                 sad.style.display = 'none';
