@@ -11,6 +11,7 @@
 
 body{
   background:black;
+  height: 100dvh;
   /* background:darkturquoise; */
   /* background:darkcyan; */
   /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
@@ -45,7 +46,7 @@ canvas{
   position:absolute;
   display:block;
   background: transparent;
-  height:100dvh;
+  height:100%;
   top:0;
   left:0;
   z-index:99;
