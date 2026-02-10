@@ -230,7 +230,7 @@ button {
     min-height: 329px;
     max-height: 329px;    
     /* inset: -24px 0px 0px -19px; */
-    inset: -34px 0px 0px -19px;
+    inset: -32px 0px 0px -19px;
     scale: .64;
   }
   .overlay-text{
