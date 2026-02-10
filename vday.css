@@ -220,8 +220,8 @@ button {
     width:104%;
   }
   .glass-card{
-    min-height: 342px;
-    max-height: 342px;
+    min-height: 329px;
+    max-height: 329px;    
     inset: -24px 0px 0px -19px;
     scale: .64;
   }
