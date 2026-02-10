@@ -77,8 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // console.log(`In position`);
                 canvas.style.pointerEvents = 'none';
                 // targetElement.classList.add('active');
-            } 
-            touch = event.touches[0];      
+            }
         });
         event.preventDefault();
     }, { passive: false });
@@ -500,14 +499,33 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.addEventListener('mousemove', function(e){
     mouse.x = e.clientX;
     mouse.y = e.clientY;
+    minDist=150;
+    });
+    canvas.addEventListener('click', function(e) {
+        minDist=0;
     });
 
-    canvas.addEventListener('touchmove', function(e){
-    const touch = e.touches[0];
-    mouse.x = touch.clientX;
-    mouse.y = touch.clientY;
-    e.preventDefault();
+    canvas.addEventListener('touchstart', function(e){
+        const touch = e.touches[0];
+        mouse.x = touch.clientX;
+        mouse.y = touch.clientY;
+
+        minDist=190;
+        
+        e.preventDefault();
     }, { passive: false });
+
+    canvas.addEventListener('touchmove', function(e){
+        const touch = e.touches[0];
+        mouse.x = touch.clientX;
+        mouse.y = touch.clientY;
+        
+        e.preventDefault();
+    }, { passive: false });
+    
+    canvas.addEventListener('touchend', function(e) {
+        minDist=0;
+    });
 
 
     function tick() {
@@ -517,6 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     tick();
+
 
 });
 
