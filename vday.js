@@ -320,13 +320,13 @@ document.addEventListener('DOMContentLoaded', () => {
         minDist = 150;
 
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.outerWidth;
+    canvas.height = window.outerHeight;
 
 
     function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.width = window.outerWidth;
+        canvas.height = window.outerHeight;
         // ctx.canvas.width = window.innerWidth;
         // ctx.canvas.height = window.innerHeight;
     }
