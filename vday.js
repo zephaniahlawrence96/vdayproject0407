@@ -385,6 +385,14 @@ document.addEventListener('DOMContentLoaded', () => {
     mouse.y = e.clientY;
     });
 
+    canvas.addEventListener('touchmove', function(e){
+    const touch = e.touches[0];
+    mouse.x = touch.clientX;
+    mouse.y = touch.clientY;
+    e.preventDefault();
+    }, { passive: false });
+
+
     function tick() {
     draw();
     update();
