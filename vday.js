@@ -86,7 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const yesbtn = document.querySelector('.yesbtn');
+    const yeshover = document.querySelector('.yeshover');
     const nobtn = document.querySelector('.nobtn');
+    const nohover = document.querySelector('.nohover');
     const nobtn2 = document.querySelector('.nobtn2');
     const hopeful = document.querySelector('.hopeful');
     const smile = document.querySelector('.smile');
@@ -96,10 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const message1 = document.querySelector('.message1');
     const message2 = document.querySelector('.message2');
     const envelope = document.querySelector('.envelope');
+    const emotehover = document.querySelector('.emotehover');
+    const emotehover2 = document.querySelector('.emotehover2');
 
 
     document.addEventListener('touchmove', function(event) {
         // canvas.style.pointerEvents = 'all';
+        yeshover.classList.remove('hover');
         const touch = event.touches[0];
         const touchX = touch.clientX;
         const touchY = touch.clientY;
@@ -110,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 touchX >= btnspace.left && touchX <= btnspace.right &&
                 touchY >= btnspace.top && touchY <= btnspace.bottom
             ) {
+                yeshover.classList.add('hover');
+                nohover.classList.remove('hover');
                 hopeful.style.display = 'inline';
                 smile.style.display = 'none';
                 sad.style.display = 'none';
@@ -124,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('touchmove', function(event) {
         // canvas.style.pointerEvents = 'all';
+        nohover.classList.remove('hover');
         const touch = event.touches[0];
         const touchX = touch.clientX;
         const touchY = touch.clientY;
@@ -134,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 touchX >= btnspace.left && touchX <= btnspace.right &&
                 touchY >= btnspace.top && touchY <= btnspace.bottom
             ) {
+                nohover.classList.add('hover');
                 sad.style.display = 'inline';
                 smile.style.display = 'none';
                 cry.style.display = 'none';
@@ -148,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('touchmove', function(event) {
         // canvas.style.pointerEvents = 'all';
+        emotehover.classList.remove('hover');
         const touch = event.touches[0];
         const touchX = touch.clientX;
         const touchY = touch.clientY;
@@ -158,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 touchX >= btnspace.left && touchX <= btnspace.right &&
                 touchY >= btnspace.top && touchY <= btnspace.bottom
             ) {
-                emotehover.classList.add(':hover');
+                emotehover.classList.add('hover');
             }
         event.preventDefault();  
     }, { passive: false });
@@ -166,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('touchmove', function(event) {
         // canvas.style.pointerEvents = 'all';
+        emotehover2.classList.remove('hover');
         const touch = event.touches[0];
         const touchX = touch.clientX;
         const touchY = touch.clientY;
@@ -176,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 touchX >= btnspace.left && touchX <= btnspace.right &&
                 touchY >= btnspace.top && touchY <= btnspace.bottom
             ) {
-
+                emotehover2.classList.add('hover');
             }
         event.preventDefault();  
     }, { passive: false });

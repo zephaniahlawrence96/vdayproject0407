@@ -377,13 +377,38 @@ button {
   scale: 1.09;
   transition: scale .7s ease-in-out;
 }
+.yeshover.hover{
+  color:green;
+  scale: 1.09;
+  transition: scale .7s ease-in-out;
+}
 
 .nohover:hover{
   color:red;
   scale: 1.09;
   transition: scale .7s ease-in-out;
 }
+.nohover.hover{
+  color:red;
+  scale: 1.09;
+  transition: scale .7s ease-in-out;
+}
 .emotehover:hover{
+  box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
+  scale: 1.24;
+  transition: scale .7s ease-in-out;
+}
+.emotehover.hover{
+  box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
+  scale: 1.24;
+  transition: scale .7s ease-in-out;
+}
+.emotehover2:hover{
+  box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
+  scale: 1.24;
+  transition: scale .7s ease-in-out;
+}
+.emotehover2.hover{
   box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
   scale: 1.24;
   transition: scale .7s ease-in-out;
