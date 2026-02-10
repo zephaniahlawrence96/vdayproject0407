@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // console.log(`In position`);
                 canvas.style.pointerEvents = 'none';
                 // targetElement.classList.add('active');
-            }       
+            } 
+            touch = event.touches[0];      
         });
         event.preventDefault();
     }, { passive: false });
