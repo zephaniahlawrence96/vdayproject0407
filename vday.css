@@ -221,7 +221,7 @@ button {
   #targetElement{
     position:absolute;
     /* inset:24% 0 0 -2px; */
-    inset:34% 0 0 -1px;
+    inset:29% 0 0 -1px;
     /* height:57%; */
     height:56%;
     width:104%;
@@ -230,7 +230,7 @@ button {
     min-height: 329px;
     max-height: 329px;    
     /* inset: -24px 0px 0px -19px; */
-    inset: -34px 0px 0px -19px;
+    inset: -42px 0px 0px -19px;
     scale: .64;
   }
   .overlay-text{
