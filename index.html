@@ -11,7 +11,8 @@
         <meta name="theme-color" content="transparent"> -->
         <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="theme-color" content="transparent">
-        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+        <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <title>Will you be my Valentine? 🤍</title>
         <meta name="description" content="Bria, will you be my Valentine?"/>
@@ -31,23 +32,28 @@
 
     <body>
         
-            <div id="targetElement" class="video-container">
+            <div id="targetElement" class="video-container" style="display:flex; position:absolute; align-self:center; justify-self:center;">
                 <!-- <img src="images/alternatebackground.png" style="top:0; height:100dvh; width:100%;"> -->
-                 <img src="gifs/bubbleheartgif.gif" style="display:flex; position:absolute; align-self:center; justify-self:center; inset:0px 0px 0px -24px; object-fit:cover; height:100%; width:104%;" >
-                <div class="overlay-text(off) glass-card reveal" data-direction="top">
-                    <h1 class="overlay-text reveal(off)" data-direction="right" style="margin-top:29.7px; margin-bottom:11px; text-align:left; justify-self: center; font-size:clamp(2.19rem, 8.42vw, 2.94rem)"><p style="margin-bottom:0px; font-size:clamp(2.42rem, 8.42vw, 2.99rem);">Bria,</p>Will you be my Valentine?</h1>
-                    <button id="yesbtn" class="yesbtn yeshover reveal(off)" data-direction="left">
-                        YES
-                    </button>
-                    <button id="nobtn" class="nobtn nohover escape reveal(off)" data-direction="bottom">
-                        NO
-                    </button>
-                    <button id="nobtn2" class="nobtn2 nohover escape">
-                        NOPE
-                    </button>
+                 <img src="gifs/bubbleheartgif.gif" style="display:flex; position:absolute; align-self:center; justify-self:center; inset:0px 0px 0px -2.9%; object-fit:cover; height:100%; width:104%;">
+                <!-- <img src="gifs/bubbleheartgif.gif" style="display:flex; position:absolute; align-self:center; justify-self:center; object-fit:cover; height:100%; width:104%;"> -->
+                 <div class="overlay-text(off) glass-card reveal" data-direction="top">
+                    <!-- font-size:clamp(1.24rem, 5.42vw, 2.94rem) -->
+                     <!-- font-size:clamp(1.29rem, 8.42vw, 2.99rem) -->
+                    <h1 class="overlay-text reveal(off)" data-direction="right" style="margin-top:29.7px; margin-bottom:11px; text-align:left; justify-self: center; font-size:clamp(1.77rem, 8.42vw, 2.94rem)"><p style="margin-bottom:0px; font-size:clamp(1.84rem, 8.49vw, 2.99rem);">Bria,</p>Will you be my Valentine?</h1>
+                    <div class="btngroup">
+                        <button id="yesbtn" class="yesbtn yeshover reveal(off)" data-direction="left">
+                            YES
+                        </button>
+                        <button id="nobtn" class="nobtn nohover escape reveal(off)" data-direction="bottom">
+                            NO
+                        </button>
+                        <button id="nobtn2" class="nobtn2 nohover escape">
+                            NOPE
+                        </button>
+                    </div>
 
                     <br>
-                    <p class="reveal" data-direction="bottom" style="position:absolute; left:42.8%; margin-top: 14px; margin-bottom:-19px;">
+                    <p class="emotegroup reveal" data-direction="bottom">
                         <img class="emote hopeful" src="gifs/hopeful.gif">
                         <img class="emote smile" src="gifs/smile.gif">
                         <img class="emote sad" src="gifs/sad.gif">  
