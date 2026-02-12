@@ -312,8 +312,8 @@ button {
 @media screen and (max-height: 900px) {
   .glass-card{
     margin:1% 0px 0px 0px;
-    height:20%;
-    min-height: 294px;
+    /* height:20%; */
+    min-height: 311px;
     max-height: 367px;
   }
 }
@@ -445,7 +445,7 @@ button {
   color:#b76e79;
   /* bottom:clamp(0px, 4px, 4%); */
   /* bottom:clamp(0px, 9%, 4px); */
-  top:clamp(-19px, -2.7%, -1px);
+  top:clamp(-19px, -4.7%, -1px);
   /* top:84%; */
   /* margin-bottom:auto; */
   background:transparent;
