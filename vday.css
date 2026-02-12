@@ -30,15 +30,24 @@ html, body {
   /* position:relative; */
   /* background:black; */
   /* background: url("images/alternatebackground.png"); */
-  display:flex;
+  display:inline-flex;
   position:absolute;
-  align-content:center; 
+  /* align-content:center; 
+  justify-content:center; */
+
+  align-self:center;
+  align-items:center;
+  align-content:center;
+  justify-self:center;
+  justify-items:center;
   justify-content:center;
+
   height: 100dvh;
   width:100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Hide potential scroll bars caused by positioning */
+  overflow: visible; /* Hide potential scroll bars caused by positioning */
+  /* overflow: hidden; */
   /* font-family: 'Nunito' */
   font-family: 'Jersey 20';
   scrollbar-width: none;
@@ -49,10 +58,11 @@ canvas{
   position:absolute;
   display:block;
   background: transparent;
-  top:0;
-  left:0;
+  /* top:0;
+  left:0; */
   z-index:99;
-  overflow:visible;
+  overflow:hidden;
+  height:140dvh; 
   /* height:100%; */
   /* width:100%; */
   /* pointer-events: none; */
@@ -284,7 +294,8 @@ button {
 
   }
   .glass-card{
-    margin:2% 0px 0px 0px;
+    margin:0% 0px 0px 0px;
+    /* height: 45%; */
     /* min-width:90%; */
     /* min-width:394px;
     width:82%;
@@ -298,7 +309,14 @@ button {
     margin-left:4px;
   }
 }
-
+@media screen and (max-height: 900px) {
+  .glass-card{
+    margin:1% 0px 0px 0px;
+    height:20%;
+    min-height: 294px;
+    max-height: 367px;
+  }
+}
 
 
 
