@@ -82,25 +82,25 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
     }, { passive: false });
 
-    document.addEventListener('click', function(event) {
-        canvas.style.pointerEvents = 'all';
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
+    // document.addEventListener('click', function(event) {
+    //     canvas.style.pointerEvents = 'all';
+    //     const mouseX = event.clientX;
+    //     const mouseY = event.clientY;
 
-        btns.forEach(btn => {
-            const btnspace = btn.getBoundingClientRect();
+    //     btns.forEach(btn => {
+    //         const btnspace = btn.getBoundingClientRect();
 
-            if (
-                mouseX >= btnspace.left && mouseX <= btnspace.right &&
-                mouseY >= btnspace.top && mouseY <= btnspace.bottom
-            ) {
-                // Mouse is over the target element, change pointer-events of the other element
-                // console.log(`In position`);
-                canvas.style.pointerEvents = 'none';
-                // targetElement.classList.add('active');
-            }       
-        });
-    });
+    //         if (
+    //             mouseX >= btnspace.left && mouseX <= btnspace.right &&
+    //             mouseY >= btnspace.top && mouseY <= btnspace.bottom
+    //         ) {
+    //             // Mouse is over the target element, change pointer-events of the other element
+    //             // console.log(`In position`);
+    //             canvas.style.pointerEvents = 'none';
+    //             // targetElement.classList.add('active');
+    //         }       
+    //     });
+    // });
 });
 
 
@@ -519,7 +519,7 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.addEventListener('mousemove', function(e){
     mouse.x = e.clientX;
     mouse.y = e.clientY;
-    minDist=150;
+    // minDist=150;
     });
     canvas.addEventListener('click', function(e) {
         minDist=0;
