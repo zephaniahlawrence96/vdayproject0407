@@ -62,7 +62,7 @@ canvas{
   left:0; */
   z-index:99;
   overflow:hidden;
-  /* height:100dvh;  */
+  height:124dvh; 
   /* height:100%; */
   /* width:100%; */
   /* pointer-events: none; */
@@ -317,16 +317,15 @@ button {
     max-height: 367px;
   }
 }
+
 @media screen and (max-height: 787px) {
   .glass-card{
-    margin:-1% 0px 0px 0px;
-    /* height:20%; */
-    min-height: 342px;
+    margin:4% 0px 0px 0px;
+    min-height: 311px;
     max-height: 367px;
-    scale:.87;
+    /* scale:.49; */
   }
 }
-
 
 
 
