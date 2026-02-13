@@ -1,112 +1,628 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-<!doctype html>
-<html lang="en">
-
-
-    <head>
-        <meta charset="utf-8"/>
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
-        <meta name="theme-color" content="transparent"> -->
-        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="theme-color" content="transparent">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <title>Will you be my Valentine? 🤍</title>
-        <meta name="description" content="Bria, will you be my Valentine?"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-        <link href="vday.css" rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-        <link rel="icon" href="images/twogoldhearts.png" type="image/png">
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
-        
-        <script src="vday.js" defer></script>
+/* * {
+  margin: 0;
+} */
 
 
-    <body>
-        
-            <div id="targetElement" class="video-container" style="display:flex; position:absolute; align-self:center; justify-self:center;">
-                <!-- <img src="images/alternatebackground.png" style="top:0; height:100dvh; width:100%;"> -->
-                 <img src="gifs/bubbleheartgif.gif" style="display:flex; position:absolute; align-self:center; justify-self:center; inset:0px 0px 0px -2.9%; object-fit:cover; height:100%; width:104%;">
-                <!-- <img src="gifs/bubbleheartgif.gif" style="display:flex; position:absolute; align-self:center; justify-self:center; object-fit:cover; height:100%; width:104%;"> -->
-                 <div class="overlay-text(off) glass-card reveal" data-direction="top">
-                    <!-- font-size:clamp(1.24rem, 5.42vw, 2.94rem) -->
-                     <!-- font-size:clamp(1.29rem, 8.42vw, 2.99rem) -->
-                    <h1 class="overlay-text reveal(off)" data-direction="right" style="margin-top:29.7px; margin-bottom:11px; text-align:left; justify-self: center; font-size:clamp(1.77rem, 8.42vw, 2.94rem)"><p style="margin-bottom:0px; font-size:clamp(1.84rem, 8.49vw, 2.99rem);">Dear Bria,</p>Will you be my Valentine?</h1>
-                    <div class="btngroup">
-                        <button id="yesbtn" class="yesbtn yeshover reveal(off)" data-direction="left">
-                            YES
-                        </button>
-                        <button id="nobtn" class="nobtn nohover escape reveal(off)" data-direction="bottom">
-                            NO
-                        </button>
-                        <button id="nobtn2" class="nobtn2 nohover escape">
-                            NOPE
-                        </button>
-                    </div>
+body{
+  background:black;
+  /* background:darkturquoise; */
+  /* background:darkcyan; */
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+  /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+  /* background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%); */
+  /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
+  /* background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%); */
+  /* background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); */
+  /* background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%); */
+  /* background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%); */
+  /* background-image: url("images/alternatebackground.png") center center / cover no-repeat; */
+  /* background-image: url("images/bubbleheartfallback.png") center center / cover no-repeat; */
+}
 
-                    <br>
-                    <p class="emotegroup reveal" data-direction="bottom">
-                        <img class="emote hopeful" src="gifs/hopeful.gif">
-                        <img class="emote smile" src="gifs/smile.gif">
-                        <img class="emote sad" src="gifs/sad.gif">  
-                        <img class="emote droop" height="72rem" width="72rem" src="gifs/droop.gif">
-                        <button id="crybtn" class="cry emotehover" popovertarget="message2">
-                            <img class="emote" src="gifs/cry.gif">
-                        </button>
-                        <button id="envelopebtn" class="envelope emotehover2" popovertarget="message2">
-                            <img class="emote" src="gifs/envelope.gif">
-                        </button>
-                    </p>
-                    <p class="message1">Just shut up and click me!</p> 
-                    
-                    <div id="message2" class="message2" popover>
-                        <div class="wrapper1">
-                            <div class="itemLeft item1"></div>
-                            <div class="itemLeft item2"></div>
-                            <div class="itemLeft item3"></div>
-                            <div class="itemLeft item4"></div>
-                            <div class="itemLeft item5"></div>
-                            <div class="itemLeft item6"></div>
-                            <div class="itemLeft item7"></div>
-                            <div class="itemLeft item8"></div>
-                            <div class="itemLeft item9"></div>
-                            <div class="itemLeft item10"></div>
-                        </div>
-                        <div class="wrapper2">
-                            <div class="itemRight item1"></div>
-                            <div class="itemRight item2"></div>
-                            <div class="itemRight item3"></div>
-                            <div class="itemRight item4"></div>
-                            <div class="itemRight item5"></div>
-                            <div class="itemRight item6"></div>
-                            <div class="itemRight item7"></div>
-                            <div class="itemRight item8"></div>
-                            <div class="itemRight item9"></div>
-                            <div class="itemRight item10"></div>
-                        </div>
+html, body {
+  /* position:relative; */
+  /* background:black; */
+  /* background: url("images/alternatebackground.png"); */
+  display:inline-flex;
+  position:absolute;
+  /* align-content:center; 
+  justify-content:center; */
 
-                        <br>
-                        
-                        <h1 id="message3" class="message3">Thank you for these memories. <br> I love you. </h1>
-                        <!-- <img height="94rem" width="94rem" src="images/whiteheartcrystal.png"> -->
-                    </div>
-                    
-                </div>
-                
-            </div>
-            <canvas id="canvas"></canvas>
+  align-self:center;
+  align-items:center;
+  align-content:center;
+  justify-self:center;
+  justify-items:center;
+  justify-content:center;
+
+  height: 100dvh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  overflow: visible; /* Hide potential scroll bars caused by positioning */
+  /* overflow: hidden; */
+  /* font-family: 'Nunito' */
+  font-family: 'Jersey 20';
+  scrollbar-width: none;
+  -webkit-scrollbar-width: none;
+}
+
+canvas{
+  position:absolute;
+  display:block;
+  background: transparent;
+  /* top:0;
+  left:0; */
+  z-index:99;
+  overflow:hidden;
+  height:124dvh; 
+  /* height:100%; */
+  /* width:100%; */
+  /* pointer-events: none; */
+}
+
+
+button {
+  /* background: linear-gradient(110deg,blue, hotpink); */
+  font-size:1.69rem;
+  /* background:#b76e79; */
+  background:transparent;
+  /* color:#b76e79; */
+  /* border: 1px solid #BF7D6E; */
+
+  border: 1px solid rgba(191, 125, 110, .24);
+  /* border: 1px solid rgba(255, 255, 255, 0.14); */
+  border-radius: 11px;
+  box-shadow:0 1px 29px rgba(0, 0, 0, 0.4);
+  padding-block:4.9px;
+  /* width:124px; */
+  width:49%;
+  align-content:center;
+  align-items:center;
+  align-self:center;
+  z-index: 24;
+  transition: color .7s ease-in-out;
+}
+
+.btngroup{
+  display:flex;
+  width:100%;
+  padding:0px;
+  column-gap:14px;
+  white-space: nowrap;
+}
+
+.yesbtn{
+  /* position:absolute; */
+  /* margin-right:9px; */
+  color:#b76e79;
+  transition: color .7s ease-in-out;
+  /* margin-left:0px; */
+}
+.nobtn{
+  color:slategray;
+  transition: color .7s ease-in-out;
+}
+.nobtn2{
+  display:none;
+  position:absolute;
+  color:slategray;
+  margin-left:94px;
+  margin-top: 424px;
+  transition: color .7s ease-in-out;
+}
+/* .escape{
+  position:absolute;
+} */
+
+
+[popover]{
+  opacity:0;
+  transition: opacity 1.4s ease-in-out;
+}
+[popover]:popover-open{
+  opacity:1;
+}
+/* 3. Starting styles for entry animation (from hidden to open) */
+@starting-style {
+  /* This block defines the 'before-open' state to transition from */
+  [popover]:popover-open {
+    opacity: 0;
+  }
+}
+
+.emotegroup{
+  display:flex;
+  width:100%;
+  margin-top:-11px;
+  /* inset: */
+  /* position:absolute; */
+  /* left:42.8%; */
+  /* margin-top: 14px; */
+  /* margin-bottom:-19px; */
+  white-space:nowrap;
+  align-self:center;
+  align-items:center;
+  align-content:center;
+  justify-self:center;
+  justify-items:center;
+  justify-content:center;
+}
+
+
+.emote{
+  height:4rem;
+  width:4rem;
+}
+.hopeful{
+  display:none;
+}
+.smile{
+  display:inline;
+  /* border:2px solid red; */
+}
+.cry{
+  display:none;
+  border:none;
+  /* position:absolute; */
+
+  /* border:2px none red; */
+  /* width: 84px; */
+  align-self:center;
+  align-content:center;
+  align-items:center;
+  justify-self:center;
+  justify-content:center;
+  justify-items:center;
+  box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
+}
+.sad{
+  display:none;
+}
+.droop{
+  display:none;
+}
+.hurt{
+  display: none;
+}
+.envelope{
+  display:none;
+  border:none;
+  position:absolute;
+  top:0px;
+  /* cursor:pointer; */
+  /* border:2px solid red; */
+  width: 84px;
+  align-self:center;
+  align-content:center;
+  align-items:center;
+  justify-self:center;
+  justify-content:center;
+  justify-items:center;
+  box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
+  /* z-index:200; */
+  /* transition: scale .4s ease-in-out; */
+}
+
+
+.glass-card {
+  display:flex;
+  position:relative;
+  flex-direction: column;
+    /* position:absolute; */
+    /* inset: -42px 0px 0px 0px; */
+    /* margin:-42px 0px 0px 0px; */
+    /* margin:-8.4% 0px 0px 0px; */
+    top:-4.9%;
+    /* 1. Set a semi-transparent background color using RGBA */
+    background: rgba(255, 255, 255, 0.04); 
     
+    /* 2. Apply the backdrop-filter to blur the content behind the card */
+    backdrop-filter: blur(9px); 
+    -webkit-backdrop-filter: blur(9px); /* For Safari support */
+    
+    /* 3. Add finishing touches like border-radius, border, and shadow for depth */
+    border-radius: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.14); /* Subtle white border for the "edge of glass" */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    padding: 0px 20px 0px 20px;
+    /* height: 342px; */
+    /* width: 494px; */
+    min-height: 324px;
+    height: 45%;
+    width: 89%;
+    max-height: 367px;
+    max-width: 494px;
+    white-space:nowrap;
+    text-align: center;
+    align-self:center;
+    justify-self:center;
+    align-items:center;
+    justify-items:center;
+    z-index: 24;
+}
 
-    </body>
+
+/* @media screen and (max-width: 760px) {
+  #targetElement{
+    display:flex;
+    position:absolute;
+   
+    height:56%;
+    width:104%;
+    align-self:center;
+    justify-self:center;
+
+  }
+  .glass-card{
+    margin:2% 0px 0px 0px;
+
+    min-width:394px;
+    width:82%;
+    max-width:400px;
+    min-height: 342px;
+    height:56px;
+    max-height: 319px;    
+    scale: .64;
+  }
+  .overlay-text{
+    margin-left:4px;
+  }
+  .message1{
+    position:relative;
+    top:clamp(-3.7vw, -3.4vw, -2vw);
+  }
+} */
 
 
-</html>
+@media screen and (max-width: 490px) {
+  #targetElement{
+    display:flex;
+    position:absolute;
+    /* height:57%; */
+    height:56%;
+    width:104%;
+    align-self:center;
+    justify-self:center;
+
+  }
+  .glass-card{
+    margin:0% 0px 0px 0px;
+    /* height: 45%; */
+    /* min-width:90%; */
+    /* min-width:394px;
+    width:82%;
+    max-width:94%; */
+    /* min-height: 319px;
+    height:319px;
+    max-height: 319px;     */
+    scale: .64;
+  }
+  .overlay-text{
+    margin-left:4px;
+  }
+}
+@media screen and (max-height: 900px) {
+  .glass-card{
+    margin:1% 0px 0px 0px;
+    /* height:20%; */
+    min-height: 311px;
+    max-height: 367px;
+  }
+}
+
+@media screen and (max-height: 787px) {
+  .glass-card{
+    margin:4% 0px 0px 0px;
+    min-height: 311px;
+    max-height: 367px;
+    /* scale:.49; */
+  }
+}
+
+
+
+.video-container {
+  position: relative; /* Container for positioning the video and content */
+  display:flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  align-items:center;
+  justify-items:center;
+  align-content:center;
+  justify-content:center;
+}
+
+.video-container video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Puts the video behind other content */
+  object-fit: cover;
+  /* aspect-ratio: 16 / 9; */
+}
+
+/* Style for the overlay content */
+.content {
+  position: relative;
+  z-index: 1; /* Ensures content appears over the video */
+  color: white;
+  /* Add other styling for your content here (padding, text alignment, etc.) */
+}
+
+/* Optional: Add a background overlay for better text readability */
+.video-container::after {
+  content: '';
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.24); */
+  z-index: 0;
+}
+
+.overlay-text {
+  /* display: inline-block; */
+    /* Position the text absolutely within the container */
+    /* position: absolute; */
+
+    z-index: 2; /* Place the text on top of the video */
+    /* color: pink; Make the text visible against a dark video */
+    color: #b76e79;
+    font-size: 3rem; /* Adjust font size */
+    text-align: center; /* Center the text within its own div */
+    align-self:center;
+    align-content:center;
+    justify-content:center;
+    justify-self:center;
+    white-space:nowrap;
+    /* Add text shadow for better readability */
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  */
+    /* opacity: .84; */
+    /* cursor:pointer; */
+}
+
+.yeshover:hover{
+  color:green;
+  scale: 1.09;
+  transition: scale .7s ease-in-out;
+}
+.yeshover.hover{
+  color:green;
+  scale: 1.09;
+  transition: scale .7s ease-in-out;
+}
+
+.nohover:hover{
+  color:red;
+  scale: 1.09;
+  transition: scale .7s ease-in-out;
+}
+.nohover.hover{
+  color:red;
+  scale: 1.09;
+  transition: scale .7s ease-in-out;
+}
+.emotehover:hover{
+  box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
+  scale: 1.24;
+  transition: scale .7s ease-in-out;
+}
+.emotehover.hover{
+  box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
+  scale: 1.24;
+  transition: scale .7s ease-in-out;
+}
+.emotehover2:hover{
+  box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
+  scale: 1.24;
+  transition: scale .7s ease-in-out;
+}
+.emotehover2.hover{
+  box-shadow:0 0px 0px rgba(0, 0, 0, 0.0);
+  scale: 1.24;
+  transition: scale .7s ease-in-out;
+}
+
+
+
+#targetElement {
+    transition: transform 1.4s ease-in-out;
+}
+
+/* The class added by JavaScript when the condition is met */
+#targetElement.active {
+    transform: scale(1.024);
+}
+
+
+.message1{
+  display:flex;
+  position:relative;
+  visibility: hidden;
+  color:#b76e79;
+  /* bottom:clamp(0px, 4px, 4%); */
+  /* bottom:clamp(0px, 9%, 4px); */
+  top:clamp(-19px, -4.7%, -1px);
+  /* top:84%; */
+  /* margin-bottom:auto; */
+  background:transparent;
+  font-size: 1.4rem;
+  /* border: 2px solid red; */
+  border-radius: 11px;
+  align-self:center;
+  align-content:center;
+  align-items:center;
+  justify-self:center;
+  justify-content:center;
+  justify-items:center;
+}
+
+.message2 {
+  background:transparent;
+  backdrop-filter: blur(9px); 
+  -webkit-backdrop-filter: blur(9px);
+  /* height:424px; */
+  /* width: 724px; */
+  min-height:549px;
+  height:64%;
+  width: 89%;
+  max-width: 1024px;
+  border: 1px solid rgba(255, 255, 255, 0.14); /* Subtle white border for the "edge of glass" */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 11px;
+  align-content:center;
+  overflow: hidden;
+}
+
+.message3{
+  margin-top: 24px;
+  margin-bottom: -42px;
+  color:#b76e79;
+}
+
+
+.wrapper1 {
+  /* display:none; */
+  margin-top:-11px;
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  height: 142px;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+.wrapper2 {
+  margin-top: 2rem;
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  height: 142px;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+@keyframes scrollRight {
+  to {
+    right: -200px;
+  }
+}
+
+.itemLeft,
+.itemRight {
+  /* display:inline-block; */
+  width: 200px;
+  height: 142px;
+  /* background-color: black; */
+  border-radius: 11px;
+  position: absolute;
+  /* object-fit: cover; */
+  overflow:hidden;
+  animation-timing-function: linear;
+  animation-duration: 42s;
+  animation-iteration-count: infinite;
+}
+
+.itemLeft {
+  border-radius: 11px;
+  left: max(calc(200px * 10), 100%);
+  animation-name: scrollLeft;
+}
+
+.itemRight {
+  border-radius: 11px;
+  right: max(calc(200px * 10), calc(100% + 200px));
+  animation-name: scrollRight;
+}
+
+.item1 {
+  background: url("gifs/birthday.gif") center 29% / 104% no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 1) * -1);
+}
+
+.item2 {
+  background: url("images/holdinghandsformatted.jpg") 100% 72% / 124% no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 2) * -1);
+}
+
+.item3 {
+  background: url("images/pumpkinpatch1formatted.jpg") 80% 60% / 124% no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 3) * -1);
+}
+
+.item4 {
+  background: url("images/golf2formatted.jpg") 40% 29% / 124% no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 4) * -1);
+}
+
+.item5 {
+  background: url("images/car1.JPG") center 40% / 104% no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 5) * -1);
+}
+
+.item6 {
+  background: url("gifs/axethrowing2.gif") 0% 49% / 104% no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 6) * -1);
+}
+
+.item7 {
+  background: url("gifs/carride.gif") 40% 42% / 114% no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 7) * -1);
+}
+
+.item8 {
+  background: url("gifs/s4.gif") 49% 44% / 174% no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 8) * -1);
+}
+.item9 {
+  background: url("images/lipstick1.jpg") center 42% / cover no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 9) * -1);
+}
+.item10 {
+  background: url("images/halloween3.JPG") center 32% / cover no-repeat;
+  animation-delay: calc(42s / 10 * (10 - 10) * -1);
+}
+
+
+/* reveal animations */
+.reveal{opacity:0; transform:translateY(24px) scale(0.98);transition: all 2900ms cubic-bezier(.4,.9,.24,1); will-change:transform opacity;}
+.reveal.in-view{opacity:1; transform:translateY(0) scale(1);}
+.reveal[data-direction="left"]{transform: translateX(-40px) scale(0.98);}
+.reveal[data-direction="right"]{transform: translateX(40px) scale(0.98);}
+.reveal[data-direction="top"]{transform: translateY(-40px) scale(0.98);}
+.reveal[data-direction="bottom"]{transform: translateY(40px) scale(0.98);}
+.reveal.in-view[data-direction="left"], .reveal.in-view[data-direction="right"],
+.reveal.in-view[data-direction="top"], .reveal.in-view[data-direction="bottom"]{
+    transform: translateX(0) translateY(0) scale(1);
+}
