@@ -317,6 +317,16 @@ button {
     max-height: 367px;
   }
 }
+@media screen and (max-height: 787px) {
+  .glass-card{
+    margin:-1% 0px 0px 0px;
+    /* height:20%; */
+    min-height: 342px;
+    max-height: 367px;
+    scale:.87;
+  }
+}
+
 
 
 
