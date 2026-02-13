@@ -466,6 +466,7 @@ button {
   -webkit-backdrop-filter: blur(9px);
   /* height:424px; */
   /* width: 724px; */
+  min-height:549px;
   height:64%;
   width: 89%;
   max-width: 1024px;
